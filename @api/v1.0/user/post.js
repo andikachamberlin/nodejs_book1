@@ -84,7 +84,7 @@ router.post('/', verify_token, (request, response) => {
                                                 if (results.length > 0) {
 
                                                     response.json({
-                                                        error : 'Username Sudah Digunakan'
+                                                        error : 'Username Denied'
                                                     })
 
                                                 } else {
@@ -164,7 +164,7 @@ router.post('/', verify_token, (request, response) => {
                                             if (results.length > 0) {
 
                                                 response.json({
-                                                    error : 'Username Sudah Digunakan'
+                                                    error : 'Username Denied'
                                                 })
 
                                             } else {

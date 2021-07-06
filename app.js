@@ -149,9 +149,11 @@ app.use('/api/v1.0/test', api_test);
 -------------------------------------------------------------------*/
 const api_login = require('./@api/v1.0/authentication/login');
 const api_register = require('./@api/v1.0/authentication/register');
+const api_logout = require('./@api/v1.0/authentication/logout');
 
 app.use('/api/v1.0/login', api_login);
 app.use('/api/v1.0/register', api_register);
+app.use('/api/v1.0/logout', api_logout);
 
 const api_user_get = require('./@api/v1.0/user/get');
 const api_user_post = require('./@api/v1.0/user/post');
@@ -173,8 +175,10 @@ app.use('/api/v1.0/product/post', api_product_post);
 -------------------------------------------------------------------*/
 app.use((request, response, next) => {
     if (toobusy()) {
-        // log if you see necessary
-        response.send(503, "Server Too Busy");
+        response.send({
+			code : 503, 
+			message : "Server Too Busy"
+		});
     } else {
 		next();
     }
@@ -187,7 +191,10 @@ app.use((request, response, next) => {
 [404]
 -------------------------------------------------------------------*/
 app.all('*', (request, response) => {
-	response.send(404, "Not Found");
+	response.send({
+		code : 404, 
+		message : "Not Found"
+	});
 });
 /*------------------------------------------------------------------
 [End 404]
