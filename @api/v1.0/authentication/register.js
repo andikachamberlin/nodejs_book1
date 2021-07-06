@@ -33,7 +33,7 @@ router.post('/', (request, response) => {
         
     if (routes.pathname == "/" && request.method === "POST") {
 
-        let level = entities.encode(request.body.level); console.log('level : ', level); if(!level){return response.json({error: 'empty level'})}
+        let level = entities.encode('user'); console.log('level : ', level); if(!level){return response.json({error: 'empty level'})}
         let status = entities.encode('active'); console.log('status : ', status); if(!status){return response.json({error: 'empty status'})}
         let name = entities.encode(request.body.name); console.log('name : ', name); if(!name){return response.json({error: 'empty name'})}
         let username = entities.encode(request.body.username).replace(/\s/g, '').toLowerCase(); console.log('username : ', username); if(!username){return response.json({error: 'empty username'})}
