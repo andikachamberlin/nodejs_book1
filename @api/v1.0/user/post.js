@@ -125,30 +125,6 @@ router.post('/', verify_token, (request, response) => {
 
                                     let id_user = entities.encode(request.body.id_user); console.log('id_user : ', id_user); if(!id_user){return response.json({error: 'empty id_user'})}
                                     let name = entities.encode(request.body.name); console.log('name : ', name); if(!name){return response.json({error: 'empty name'})}
-                                    
-                                    dbc.query("UPDATE user SET name= ? WHERE id_user= ?", [name, id_user], (error, results) => {
-
-                                        if (error) {
-                                            console.log(error)
-                                            response.json({
-                                                error : 'Request Error'
-                                            })
-                    
-                                        } else {
-
-                                            response.json({
-                                                result: 'success',
-                                                title : 'Successfully',
-                                                data : null
-                                            })
-
-                                        }
-                    
-                                    });
-                                
-                                }else if(action === 'update_username'){
-
-                                    let id_user = entities.encode(request.body.id_user); console.log('id_user : ', id_user); if(!id_user){return response.json({error: 'empty id_user'})}
                                     let username = entities.encode(request.body.username).replace(/\s/g, '').toLowerCase(); console.log('username : ', username); if(!username){return response.json({error: 'empty username'})}
                                     
                                     dbc.query("SELECT username FROM user WHERE username = ?", [username], (error, results) => {
@@ -169,7 +145,7 @@ router.post('/', verify_token, (request, response) => {
 
                                             } else {
 
-                                                dbc.query("UPDATE user SET username= ? WHERE id_user= ?", [username, id_user], (error, results) => {
+                                                dbc.query("UPDATE user SET name= ?, username= ? WHERE id_user= ?", [name, username, id_user], (error, results) => {
 
                                                     if (error) {
                                                         console.log(error)
@@ -200,31 +176,6 @@ router.post('/', verify_token, (request, response) => {
                                     let password_hash = entities.encode(sha1(request.body.password));
 
                                     dbc.query("UPDATE user SET password= ? WHERE id_user= ?", [password_hash, id_user], (error, results) => {
-
-                                        if (error) {
-                                            console.log(error)
-                                            response.json({
-                                                error : 'Request Error'
-                                            })
-                    
-                                        } else {
-
-                                            response.json({
-                                                result: 'success',
-                                                title : 'Successfully',
-                                                data : null
-                                            })
-
-                                        }
-                    
-                                    });
-
-                                }else if(action === 'update_status'){
-
-                                    let id_user = entities.encode(request.body.id_user); console.log('id_user : ', id_user); if(!id_user){return response.json({error: 'empty id_user'})}
-                                    let status = entities.encode(request.body.status); console.log('status : ', status); if(!status){return response.json({error: 'empty status'})}
-                                    
-                                    dbc.query("UPDATE user SET status=? WHERE id_user= ?", [status, id_user], (error, results) => {
 
                                         if (error) {
                                             console.log(error)
