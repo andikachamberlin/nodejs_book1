@@ -1,0 +1,1038 @@
+{
+	"info": {
+		"_postman_id": "cc177239-141e-4503-be33-dc60fd5c5049",
+		"name": "Book-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api@v1.0",
+			"item": [
+				{
+					"name": "__test__",
+					"item": [
+						{
+							"name": "@test",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authentication",
+					"item": [
+						{
+							"name": "@login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "andikachamberlin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "action",
+											"value": "register",
+											"type": "text"
+										},
+										{
+											"key": "level",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Ayu Ananda",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "ayuananda",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "@read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/get?sct=eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX&key=W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa&action=read&offset=0&limit=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"get"
+									],
+									"query": [
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX"
+										},
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa"
+										},
+										{
+											"key": "action",
+											"value": "read"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@search",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/get?sct=eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX&key=W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa&action=search&search=Andika Chamberlin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"get"
+									],
+									"query": [
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX"
+										},
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa"
+										},
+										{
+											"key": "action",
+											"value": "search"
+										},
+										{
+											"key": "search",
+											"value": "Andika Chamberlin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@insert",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "insert",
+											"type": "text"
+										},
+										{
+											"key": "level",
+											"value": "user",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Adam",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "adam",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update",
+											"type": "text"
+										},
+										{
+											"key": "id_user",
+											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Adam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update_username",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update_username",
+											"type": "text"
+										},
+										{
+											"key": "id_user",
+											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "adam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update_password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update_password",
+											"type": "text"
+										},
+										{
+											"key": "id_user",
+											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update_status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update_status",
+											"type": "text"
+										},
+										{
+											"key": "id_user",
+											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "delete",
+											"type": "text"
+										},
+										{
+											"key": "id_user",
+											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/user/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"user",
+										"post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "@read",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/get?sct=eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX&key=W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa&action=read&offset=0&limit=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"get"
+									],
+									"query": [
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX"
+										},
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa"
+										},
+										{
+											"key": "action",
+											"value": "read"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@search",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/get?sct=eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX&key=W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa&action=search&search=tajwid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"get"
+									],
+									"query": [
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX"
+										},
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa"
+										},
+										{
+											"key": "action",
+											"value": "search"
+										},
+										{
+											"key": "search",
+											"value": "tajwid"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@insert",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "insert",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Aplikasi Otomotif",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "mobile",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/andikachamberlin/Pictures/dummy/image.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update_text",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update_text",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Aplikasi Otomotif",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "mobile",
+											"type": "text"
+										},
+										{
+											"key": "id_product",
+											"value": "0DLcloVfrVOr6VgZ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@update_file",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "update_file",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Aplikasi Goes",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "mobile",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/andikachamberlin/Pictures/dummy/pawel-czerwinski-xubOAAKUwXc-unsplash.jpg"
+										},
+										{
+											"key": "id_product",
+											"value": "0DLcloVfrVOr6VgZ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "delete",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/andikachamberlin/Pictures/dummy/image.jpg"
+										},
+										{
+											"key": "id_product",
+											"value": "B0dvvqsAgsnYDxsN",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/product/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"product",
+										"post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
