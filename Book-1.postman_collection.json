@@ -123,6 +123,57 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "@logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU3NTk2Mzh9.RaZews-ApF0-YYMMprcCT-2riX1PKZxjtTBTZjOvAhs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key",
+											"value": "MWt7qgU8XMQ1TBRTcO7NYlsBpwsEeH6EybCIDCfqf4CgEFgk7IViihJkMOr3S6ii",
+											"type": "text"
+										},
+										{
+											"key": "sct",
+											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "logout",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1.0/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1.0",
+										"logout"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
