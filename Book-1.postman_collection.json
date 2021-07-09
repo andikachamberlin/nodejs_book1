@@ -405,74 +405,17 @@
 										},
 										{
 											"key": "id_user",
-											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"value": "b1R3DQfTiAR55AGNBaww9Xi8aFDP6AikNTZf0zvE0MbUtCE8E1xt0U4ZTJSwo7qh",
 											"type": "text"
 										},
 										{
 											"key": "name",
-											"value": "Adam",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "http://localhost:5000/api/v1.0/user/post",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "5000",
-									"path": [
-										"api",
-										"v1.0",
-										"user",
-										"post"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "@update_username",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "key",
-											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
-											"type": "text"
-										},
-										{
-											"key": "sct",
-											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
-											"type": "text"
-										},
-										{
-											"key": "action",
-											"value": "update_username",
-											"type": "text"
-										},
-										{
-											"key": "id_user",
-											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
+											"value": "John Doe",
 											"type": "text"
 										},
 										{
 											"key": "username",
-											"value": "adam",
+											"value": "johndoe",
 											"type": "text"
 										}
 									]
@@ -535,68 +478,6 @@
 										{
 											"key": "password",
 											"value": "12345678",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "http://localhost:5000/api/v1.0/user/post",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "5000",
-									"path": [
-										"api",
-										"v1.0",
-										"user",
-										"post"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "@update_status",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoIjpbeyJsZXZlbCI6InN1cGVyIiwic3RhdHVzIjoiYWN0aXZlIn1dLCJpYXQiOjE2MjU0NTk4NTd9.iVKawVOYQ-rlB_-sYLsWmvOXwXsLl07pJ_bZwKTKIo0",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "key",
-											"value": "W2psZWNLatLyVvZszwY6gc7r4WnVeVKnM7bQ8DZ7yAWrnbZrXMcP8MzjJa32LmDa",
-											"type": "text"
-										},
-										{
-											"key": "sct",
-											"value": "eVB8Kub8trqFyX7U2ecJ72rtzwKkkzrnDkEVuRBtjHgd8Jg2hyQ2zYYY6UprQLtX",
-											"type": "text"
-										},
-										{
-											"key": "action",
-											"value": "update_status",
-											"type": "text"
-										},
-										{
-											"key": "id_user",
-											"value": "IjkL4yfWCsdmgQZmzsgAXndK4ao4b4KrccSgWj8Piq5sg56CiozQhrTkK4h21wbr",
-											"type": "text"
-										},
-										{
-											"key": "status",
-											"value": "active",
 											"type": "text"
 										}
 									]
